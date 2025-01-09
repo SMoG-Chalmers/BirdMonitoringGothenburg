@@ -5,7 +5,7 @@ output:
     toc: true        # Enable the Table of Contents
     toc_float: true  # Enable floating TOC
     toc_depth: 2     # Depth of headers in the TOC (adjust as needed)
-#date: "`r Sys.Date()`"
+date: "Last updated: `r Sys.Date()`"
 ---
 
 
@@ -249,7 +249,7 @@ The unique LSID (Life Science Identifier) of the taxon according to the Swedish 
 
 ## BirdNETClass {#BirdNETClass}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#BirdNETClass>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClass>
 
 **Definition**:\
 The taxon scientific name originally classified by BirdNET, prior to the technical validation and reclassification of records.
@@ -262,7 +262,7 @@ The taxon scientific name originally classified by BirdNET, prior to the technic
 
 ## BirdNETConfidence {#BirdNETConfidence}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#BirdNETConfidence>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETConfidence>
 
 **Definition**:\
 The BirdNET built-in confidence score for species detection, ranging from 0 to 1 (Wood and Kahl, 2024). The dataset includes only species detections with a minimum confidence score of 0.85.
@@ -275,7 +275,7 @@ The BirdNET built-in confidence score for species detection, ranging from 0 to 1
 
 ## expertValidated {#expertValidated}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#expertValidated>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#expertValidated>
 
 **Definition**:\
 Indicates whether the occurrence record has been validated by an expert ornithologist.
@@ -288,7 +288,7 @@ Indicates whether the occurrence record has been validated by an expert ornithol
 
 ## BirdNETClassAccuracy {#BirdNETClassAccuracy}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#BirdNETClassAccuracy>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClassAccuracy>
 
 **Definition**:\
 The accuracy of the BirdNET species classification based on the random subset of validated records by the ornithologist (see Figure 4 in the paper).
@@ -301,7 +301,7 @@ The accuracy of the BirdNET species classification based on the random subset of
 
 ## misclassificationProbabilities {#misclassificationProbabilities}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#misclassificationProbabilities>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#misclassificationProbabilities>
 
 **Definition**:\
 The likelihood that a species classified by the BirdNET model is actually another species. The misclassification probability of species A being B is calculated as the ratio of the number of times species A was identified as species B, divided by the total number of the ornithologist-validated records of species A.
@@ -314,7 +314,7 @@ The likelihood that a species classified by the BirdNET model is actually anothe
 
 ## maxMisclassificationProbability {#maxMisclassificationProbability}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#maxMisclassificationProbability>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#maxMisclassificationProbability>
 
 **Definition**:\
 The highest misclassification probability among all possible species misclassifications for a given species.
@@ -327,7 +327,7 @@ The highest misclassification probability among all possible species misclassifi
 
 ## reclassificationSuggestion {#reclassificationSuggestion}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#reclassificationSuggestion>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassificationSuggestion>
 
 **Definition**:\
 The species with the highest misclassification probability, suggesting a possible reclassification of the BirdNET original classification.
@@ -340,7 +340,7 @@ The species with the highest misclassification probability, suggesting a possibl
 
 ## reclassified {#reclassified}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#reclassified>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassified>
 
 **Definition**:\
 Indicates whether the occurrence record has been reclassified from the original BirdNET classification, following the decision tree shown in Figure 5 of the paper.
@@ -353,7 +353,7 @@ Indicates whether the occurrence record has been reclassified from the original 
 
 ## occurrenceAccuracy {#occurrenceAccuracy}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#occurrenceAccuracy>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#occurrenceAccuracy>
 
 **Definition**:\
 An estimation of the accuracy level of the species occurrence that ranges from 0.60 to 1.00, where:
@@ -370,7 +370,7 @@ An estimation of the accuracy level of the species occurrence that ranges from 0
 
 ## commonNameSwedish {#commonNameSwedish}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#commonNameSwedish>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#commonNameSwedish>
 
 **Definition**:\
 The common Swedish name of the taxon.
@@ -383,7 +383,7 @@ The common Swedish name of the taxon.
 
 ## commonNameEnglish {#commonNameEnglish}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#commonNameEnglish>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#commonNameEnglish>
 
 **Definition**:\
 The common English name of the taxon.
@@ -396,7 +396,7 @@ The common English name of the taxon.
 
 ## detectionDistanceInMeters {#detectionDistanceInMeters}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#detectionDistanceInMeters>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#detectionDistanceInMeters>
 
 **Definition**:\
 The expected radius, in meters, around the acoustic recorder within which sounds were detected. The values are suggested based on the maximum detection distances for typical sound amplitudes and frequencies observed in playback experiments by Sethi et al. (2021). 
@@ -408,7 +408,7 @@ The expected radius, in meters, around the acoustic recorder within which sounds
 
 ## siteName {#siteName}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#siteName>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#siteName>
 
 **Definition**:\
 The name of the site where the recorder was located.
@@ -421,7 +421,7 @@ The name of the site where the recorder was located.
 
 ## bcl {#bcl}
 
-**Identifier**: <https://smog.chalmers.se/projects/bioacoustics-study/occurance-dataset-attributes/#bcl>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#bcl>
 
 **Definition**:\
 The building type surrounding the recorder, as described in Berghauser Pont et al. (2019a, 2019b), where:
