@@ -1478,7 +1478,7 @@ border-radius: 0px;
 
 
 <h1 class="title toc-ignore">List of Attributes</h1>
-<h4 class="date">Last updated: 2025-01-09</h4>
+<h4 class="date">Last updated: 2025-01-10</h4>
 
 </div>
 
@@ -1487,15 +1487,16 @@ border-radius: 0px;
 <h1>Introduction</h1>
 <p>This document provides URI identifiers, definitions, and examples for
 all the attributes (column headers) used in the comma-delimited text
-files included in the data package.</p>
+files included in the data package
+(gothenburg_bird_data_package-v1.0).</p>
 <p>The document is divided into two main sections:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Darwin Core Attributes</strong>: Standard Darwin Core
 attributes (also known as terms) present in the dataset. For a complete
 list and detailed definitions of Darwin Core attributes, please refer to
-<a href="https://dwc.tdwg.org/list/" class="uri">https://dwc.tdwg.org/list/</a></li>
+<a href="https://dwc.tdwg.org/list/" class="uri">https://dwc.tdwg.org/list/</a>.</li>
 <li><strong>Custom Attributes</strong>: Non-Darwin Core attributes that
-provide additional information unique to this dataset</li>
+provide additional information unique to this dataset.</li>
 </ol>
 <hr />
 </div>
@@ -1607,7 +1608,7 @@ record.</p>
 <h2>taxonRank</h2>
 <p><strong>Identifier</strong>: <a href="http://rs.tdwg.org/dwc/terms/taxonRank" class="uri">http://rs.tdwg.org/dwc/terms/taxonRank</a></p>
 <p><strong>Definition</strong>:<br />
-The taxonomic rank of the most specific name in the scientificName.</p>
+The taxonomic rank of the most specific name in the <a href="#scientificName">scientificName</a>.</p>
 <p><strong>Examples</strong>:<br />
 <code>species</code></p>
 <hr />
@@ -1694,8 +1695,8 @@ Information Center (Artportalen).</p>
 <h2>BirdNETClass</h2>
 <p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClass" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClass</a></p>
 <p><strong>Definition</strong>:<br />
-The taxon scientific name originally classified by BirdNET, prior to the
-technical validation and reclassification of records.</p>
+The taxon scientific name originally classified by the BirdNET model,
+prior to the technical validation and reclassification of records.</p>
 <p><strong>Examples</strong>:<br />
 <code>Turdus merula</code><br />
 <code>Parus major</code></p>
@@ -1743,7 +1744,7 @@ paper).</p>
 The likelihood that a species classified by the BirdNET model is
 actually another species. The misclassification probability of species A
 being B is calculated as the ratio of the number of times species A was
-identified as species B, divided by the total number of the
+found to be species B, divided by the total number of the
 ornithologist-validated records of species A.</p>
 <p><strong>Examples</strong>:<br />
 <code>Anas platyrhynchos (0.04), Corvus cornix (0.94), Corvus monedula (0.02)</code><br />
@@ -1754,8 +1755,9 @@ ornithologist-validated records of species A.</p>
 <h2>maxMisclassificationProbability</h2>
 <p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#maxMisclassificationProbability" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#maxMisclassificationProbability</a></p>
 <p><strong>Definition</strong>:<br />
-The highest misclassification probability among all possible species
-misclassifications for a given species.</p>
+The highest misclassification probability value from the <a href="#misclassificationProbabilities">misclassificationProbabilities</a>
+attribute. This value represents the maximum likelihood of a species
+being misclassified as another species by the BirdNET model.</p>
 <p><strong>Examples</strong>:<br />
 <code>0.94</code><br />
 <code>1.00</code></p>
@@ -1765,8 +1767,10 @@ misclassifications for a given species.</p>
 <h2>reclassificationSuggestion</h2>
 <p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassificationSuggestion" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassificationSuggestion</a></p>
 <p><strong>Definition</strong>:<br />
-The species with the highest misclassification probability, suggesting a
-possible reclassification of the BirdNET original classification.</p>
+The species name associated with the highest misclassification
+probability from the <a href="#misclassificationProbabilities">misclassificationProbabilities</a>
+attribute, suggesting the species most likely to be correct for the
+occurrence record.</p>
 <p><strong>Examples</strong>:<br />
 <code>Larus canus</code><br />
 <code>NA</code></p>

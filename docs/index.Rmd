@@ -11,12 +11,12 @@ date: "Last updated: `r Sys.Date()`"
 
 # Introduction
 
-This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package.
+This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v1.0).
 
 The document is divided into two main sections:
 
-1.  **Darwin Core Attributes**: Standard Darwin Core attributes (also known as terms) present in the dataset. For a complete list and detailed definitions of Darwin Core attributes, please refer to <https://dwc.tdwg.org/list/>
-2.  **Custom Attributes**: Non-Darwin Core attributes that provide additional information unique to this dataset
+1.  **Darwin Core Attributes**: Standard Darwin Core attributes (also known as terms) present in the dataset. For a complete list and detailed definitions of Darwin Core attributes, please refer to <https://dwc.tdwg.org/list/>.
+2.  **Custom Attributes**: Non-Darwin Core attributes that provide additional information unique to this dataset.
 
 ------------------------------------------------------------------------
 
@@ -150,7 +150,7 @@ A two-letter standard abbreviation for the country of the occurrence record.
 **Identifier**: <http://rs.tdwg.org/dwc/terms/taxonRank>
 
 **Definition**:\
-The taxonomic rank of the most specific name in the scientificName.
+The taxonomic rank of the most specific name in the [scientificName](#scientificName).
 
 **Examples**:\
 `species`
@@ -252,7 +252,7 @@ The unique LSID (Life Science Identifier) of the taxon according to the Swedish 
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClass>
 
 **Definition**:\
-The taxon scientific name originally classified by BirdNET, prior to the technical validation and reclassification of records.
+The taxon scientific name originally classified by the BirdNET model, prior to the technical validation and reclassification of records.
 
 **Examples**:\
 `Turdus merula`\
@@ -304,7 +304,7 @@ The accuracy of the BirdNET species classification based on the random subset of
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#misclassificationProbabilities>
 
 **Definition**:\
-The likelihood that a species classified by the BirdNET model is actually another species. The misclassification probability of species A being B is calculated as the ratio of the number of times species A was identified as species B, divided by the total number of the ornithologist-validated records of species A.
+The likelihood that a species classified by the BirdNET model is actually another species. The misclassification probability of species A being B is calculated as the ratio of the number of times species A was found to be species B, divided by the total number of the ornithologist-validated records of species A.
 
 **Examples**:\
 `Anas platyrhynchos (0.04), Corvus cornix (0.94), Corvus monedula (0.02)`\
@@ -317,7 +317,7 @@ The likelihood that a species classified by the BirdNET model is actually anothe
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#maxMisclassificationProbability>
 
 **Definition**:\
-The highest misclassification probability among all possible species misclassifications for a given species.
+The highest misclassification probability value from the [misclassificationProbabilities](#misclassificationProbabilities) attribute. This value represents the maximum likelihood of a species being misclassified as another species by the BirdNET model.
 
 **Examples**:\
 `0.94`\
@@ -330,7 +330,7 @@ The highest misclassification probability among all possible species misclassifi
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassificationSuggestion>
 
 **Definition**:\
-The species with the highest misclassification probability, suggesting a possible reclassification of the BirdNET original classification.
+The species name associated with the highest misclassification probability from the [misclassificationProbabilities](#misclassificationProbabilities) attribute, suggesting the species most likely to be correct for the occurrence record.
 
 **Examples**:\
 `Larus canus`\
