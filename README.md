@@ -1,2 +1,2 @@
 # BirdMonitoringGothenburg
-A repository containing a bird species occurrence dataset (along with related code and documentation) collected through passive acoustic monitoring in Gothenburg, Sweden, during Spring 2024
+This repository is intended to host a machine learning-generated and expert-validated bird species occurrence dataset, collected through passive acoustic monitoring in Gothenburg, Sweden, during Spring 2024. It will also include related code and documentation. The dataset is currently under peer review and will be made publicly available here once the review process is completed.
