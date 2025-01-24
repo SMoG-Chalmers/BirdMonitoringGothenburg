@@ -356,7 +356,7 @@ Indicates whether the occurrence record has been reclassified from the original 
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#occurrenceAccuracy>
 
 **Definition**:\
-An estimation of the accuracy level of the species occurrence that ranges from 0.60 to 1.00, where:
+An estimation of the accuracy level of the species occurrence ranging from 0.60 to 1.00, where:
 
 -   **occurrenceAccuracy = 1.00**: For expert-validated records (`expertValidated == "Yes"`) that were found to be correct or reclassified based on a clear suggestion from the ornithologist (`reclassified == "Yes"`).
 -   **occurrenceAccuracy = [BirdNETClassAccuracy](#BirdNETClassAccuracy)**: For not expert-validated records (`expertValidated == "No"`) with `BirdNETClassAccuracy >= 0.60`
