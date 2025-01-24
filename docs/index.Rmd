@@ -330,7 +330,7 @@ The highest misclassification probability value from the [misclassificationProba
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassificationSuggestion>
 
 **Definition**:\
-The species name associated with the highest misclassification probability from the [misclassificationProbabilities](#misclassificationProbabilities) attribute, suggesting the species most likely to be correct for the occurrence record.
+The species name associated with the highest misclassification probability (≥ 0.60) from the [misclassificationProbabilities](#misclassificationProbabilities) attribute, suggesting the species most likely to be correct for the occurrence record.
 
 **Examples**:\
 `Larus canus`\
