@@ -77,11 +77,11 @@ The date during which the occurrence record was recorded, following ISO 8601 dat
 **Identifier**: <http://rs.tdwg.org/dwc/terms/eventTime>
 
 **Definition**:\
-The time during which the event occurred, following ISO 8601 date-time standard.
+The local time interval during which the event occurred, following ISO 8601 date-time standard. The “/” solidus character separates start and end times in the representation of a time interval.
 
 **Examples**:\
-`03:56:00`\
-`18:50:00`
+`06:02:03/06:02:06`\
+`23:48:57/23:49:00`
 
 ------------------------------------------------------------------------
 
