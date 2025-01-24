@@ -11,7 +11,7 @@ date: "Last updated: `r Sys.Date()`"
 
 # Introduction
 
-This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v1.0) available to download at <https://doi.org/10.5281/zenodo.14629008> (currently with restricted access).
+This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v1.0) available to download at <https://doi.org/10.5281/zenodo.14629008> (currently with restricted access for peer review).
 
 The document is divided into two main sections:
 
