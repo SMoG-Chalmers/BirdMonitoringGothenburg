@@ -11,7 +11,7 @@ date: "Last updated: `r Sys.Date()`"
 
 # Introduction
 
-This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v1.0).
+This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v1.0) available to download at <https://doi.org/10.5281/zenodo.14629008> (currently with restricted access).
 
 The document is divided into two main sections:
 
@@ -447,3 +447,16 @@ Berghauser Pont, M., Stavroulaki, G., Marcus, L., 2019b. Development of urban ty
 Wood, C.M., Kahl, S., 2024. Guidelines for appropriate use of BirdNET scores and other detector outputs. J. Ornithol. 165, 777–782. <https://doi.org/10.1007/s10336-024-02144-5>  
 
 Sethi, S.S., Fossøy, F., Cretois, B., Rosten, C.M., 2021. Management relevant applications of acoustic monitoring for Norwegian nature – The Sound of Norway, 31. Norsk institutt for naturforskning (NINA)  
+
+------------------------------------------------------------------------
+
+# Citaion
+
+Eldesoky, A. H., Gil, J., Kindvall, O., Stavroulaki, I., Leif, J., David, B., Wenqing, Y., Martínez, A., Rachel, L., Frixos, P., & Berghauser Pont, M. (2025). A bird species occurrence dataset from passive audio recordings across dense urban areas in Gothenburg, Sweden. Zenodo. https://doi.org/10.5281/zenodo.14629008
+
+------------------------------------------------------------------------
+
+# Contact
+
+If you have any question, contact us at ahmed.eldesoky@chalmers.se
+
