@@ -428,7 +428,7 @@ The building type surrounding the recorder, as described in Berghauser Pont et a
 
 -   **bcl2**: Compact low-rise buildings
 -   **bcl3**: Dense mid-rise buildings
--   **bcl5**: Compact mid-rise
+-   **bcl5**: Compact mid-rise buildings
 -   **ref_bcl6**: Reference spacious mid-rise buildings
 -   **ref**: Reference non-built green space
 
