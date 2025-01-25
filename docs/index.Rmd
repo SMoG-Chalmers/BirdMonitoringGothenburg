@@ -452,7 +452,7 @@ Sethi, S.S., Fossøy, F., Cretois, B., Rosten, C.M., 2021. Management relevant a
 
 # Citaion
 
-Eldesoky, A. H., Gil, J., Kindvall, O., Stavroulaki, I., Leif, J., David, B., Wenqing, Y., Martínez, A., Rachel, L., Frixos, P., & Berghauser Pont, M. (2025). A bird species occurrence dataset from passive audio recordings across dense urban areas in Gothenburg, Sweden. Zenodo. https://doi.org/10.5281/zenodo.14629008
+Eldesoky, A. H., Gil, J., Kindvall, O., Stavroulaki, I., Jonasson, L., Bennet, D., Yang, W., Martínez, A., Lichter, R., Petrou, F., & Berghauser Pont, M. (2025). A bird species occurrence dataset from passive audio recordings across dense urban areas in Gothenburg, Sweden [Data set]. Zenodo. https://doi.org/10.5281/zenodo.14629008
 
 ------------------------------------------------------------------------
 
