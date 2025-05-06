@@ -8,10 +8,9 @@ output:
 date: "Last updated: `r Sys.Date()`"
 ---
 
-
 # Introduction
 
-This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v1.0) available to download at <https://doi.org/10.5281/zenodo.14629008> (currently with restricted access for peer review).
+This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v2.0) available to download at <https://doi.org/10.5281/zenodo.14629008>.
 
 The document is divided into two main sections:
 
@@ -247,6 +246,19 @@ The unique LSID (Life Science Identifier) of the taxon according to the Swedish 
 
 # Custom Attributes {#custom-attributes}
 
+## globalSortOrder {#globalSortOrder}
+
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#globalSortOrder>
+
+**Definition**:\
+A taxon specific attribute provided by the Swedish Species Information Centre (Artportalen). It is an integer value, which can be used to enable a taxonomic sort order of all Swedish taxa handled in the Swedish taxonomic database (dyntaxa.se).
+
+**Examples**:\
+`58146`\
+`57141`
+
+------------------------------------------------------------------------
+
 ## BirdNETClass {#BirdNETClass}
 
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClass>
@@ -286,6 +298,19 @@ Indicates whether the occurrence record has been validated by an expert ornithol
 
 ------------------------------------------------------------------------
 
+## isIsolated {#isIsolated}
+
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#isIsolated>
+
+**Definition**:\
+Indicates whether a bird detection is isolated within a 9-second window. A detection is considered isolated if it is not preceded or followed by another detection of the same species within 9 seconds.
+
+**Examples**:\
+`Yes`\
+`No`
+
+------------------------------------------------------------------------
+
 ## BirdNETClassAccuracy {#BirdNETClassAccuracy}
 
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClassAccuracy>
@@ -312,32 +337,6 @@ The likelihood that a species classified by the BirdNET model is actually anothe
 
 ------------------------------------------------------------------------
 
-## maxMisclassificationProbability {#maxMisclassificationProbability}
-
-**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#maxMisclassificationProbability>
-
-**Definition**:\
-The highest misclassification probability value from the [misclassificationProbabilities](#misclassificationProbabilities) attribute. This value represents the maximum likelihood of a species being misclassified as another species by the BirdNET model.
-
-**Examples**:\
-`0.94`\
-`1.00`
-
-------------------------------------------------------------------------
-
-## reclassificationSuggestion {#reclassificationSuggestion}
-
-**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassificationSuggestion>
-
-**Definition**:\
-The species name associated with the highest misclassification probability (≥ 0.60) from the [misclassificationProbabilities](#misclassificationProbabilities) attribute, suggesting the species most likely to be correct for the occurrence record.
-
-**Examples**:\
-`Larus canus`\
-`NA`
-
-------------------------------------------------------------------------
-
 ## reclassified {#reclassified}
 
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassified>
@@ -351,20 +350,24 @@ Indicates whether the occurrence record has been reclassified from the original 
 
 ------------------------------------------------------------------------
 
-## occurrenceAccuracy {#occurrenceAccuracy}
+## occurrenceProbability {#occurrenceProbability}
 
-**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#occurrenceAccuracy>
+**Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#occurrenceProbability>
 
 **Definition**:\
-An estimation of the accuracy level of the species occurrence ranging from 0.60 to 1.00, where:
+An estimation of the likelihood of a species occurrence, based on expert validation and model predictions, where:
 
--   **occurrenceAccuracy = 1.00**: For expert-validated records (`expertValidated == "Yes"`) that were found to be correct or reclassified based on a clear suggestion from the ornithologist (`reclassified == "Yes"`).
--   **occurrenceAccuracy = [BirdNETClassAccuracy](#BirdNETClassAccuracy)**: For not expert-validated records (`expertValidated == "No"`) with `BirdNETClassAccuracy >= 0.60`
--   **occurrenceAccuracy = [maxMisclassificationProbability](#maxMisclassificationProbability)**: For not expert-validated records (`expertValidated == "No"`) with `BirdNETClassAccuracy < 0.60` that could be reclassified (`reclassified == "Yes"`).
+-   **occurrenceProbability = 1.00**: For expert-validated records (`expertValidated == "Yes"`) that were confirmed to be correct, or reclassified based on a clear suggestion from the ornithologist (`reclassified == "Yes"`).
+-   **0.5 \< occurrenceAccuracy \< 1.00**: For non-expert-validated records (`expertValidated == "No"`), this value shows the model-predicted probability of occurrence, based on the trained Random Forest classifier.
+
+**Recommended thresholds**:
+
+-   Maximizing specificity (`occurrenceAccuracy >= 0.82`): Prioritizes minimizing false positives, potentially increasing false negatives. It ensures that when a non-expert-validated record is predicted, the prediction is more likely to be correct, but it may miss some true occurrences.
+-   Balancing sensitivity and specificity (`occurrenceAccuracy >= 0.74`): Optimizes both true positives and true negatives, minimizing both false positives and false negatives. This threshold is determined using Youden’s J statistic (Youden, 1950).
 
 **Examples**:\
 `1.00`\
-`0.68`
+`0.51`
 
 ------------------------------------------------------------------------
 
@@ -386,7 +389,7 @@ The common Swedish name of the taxon.
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#commonNameEnglish>
 
 **Definition**:\
-The common English name of the taxon.
+The recommended common English name of the taxon according to the Swedish taxonomic database (dyntaxa.se).
 
 **Examples**:\
 `Common Blackbird`\
@@ -399,7 +402,7 @@ The common English name of the taxon.
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#detectionDistanceInMeters>
 
 **Definition**:\
-The expected radius, in meters, around the acoustic recorder within which sounds were detected. The values are suggested based on the maximum detection distances for typical sound amplitudes and frequencies observed in playback experiments by Sethi et al. (2021). 
+The expected radius, in meters, around the acoustic recorder within which sounds were detected. The values are suggested based on the maximum detection distances for typical sound amplitudes and frequencies observed in playback experiments by Sethi et al. (2021).
 
 **Examples**:\
 `20-70`
@@ -446,17 +449,18 @@ Berghauser Pont, M., Stavroulaki, G., Marcus, L., 2019b. Development of urban ty
 
 Wood, C.M., Kahl, S., 2024. Guidelines for appropriate use of BirdNET scores and other detector outputs. J. Ornithol. 165, 777–782. <https://doi.org/10.1007/s10336-024-02144-5>  
 
-Sethi, S.S., Fossøy, F., Cretois, B., Rosten, C.M., 2021. Management relevant applications of acoustic monitoring for Norwegian nature – The Sound of Norway, 31. Norsk institutt for naturforskning (NINA)  
+Sethi, S.S., Fossøy, F., Cretois, B., Rosten, C.M., 2021. Management relevant applications of acoustic monitoring for Norwegian nature – The Sound of Norway, 31. Norsk institutt for naturforskning (NINA)
+
+Youden, W.J., 1950. Index for rating diagnostic tests. *Cancer*, **3**, 32–35. DOI: doi: [10.1002/1097-0142(1950)3:1\<32::AID-CNCR2820030106\>3.0.CO;2-3](https://doi.org/10.1002/1097-0142(1950)3:1%3C32::AID-CNCR2820030106%3E3.0.CO;2-3). 
 
 ------------------------------------------------------------------------
 
 # Citaion
 
-Eldesoky, A. H., Gil, J., Kindvall, O., Stavroulaki, I., Jonasson, L., Bennet, D., Yang, W., Martínez, A., Lichter, R., Petrou, F., & Berghauser Pont, M. (2025). A bird species occurrence dataset from passive audio recordings across dense urban areas in Gothenburg, Sweden [Data set]. Zenodo. https://doi.org/10.5281/zenodo.14629008
+Eldesoky, A. H., Gil, J., Kindvall, O., Stavroulaki, I., Jonasson, L., Bennet, D., Yang, W., Martínez, A., Lichter, R., Petrou, F., & Berghauser Pont, M. (2025). A bird species occurrence dataset from passive audio recordings across dense urban areas in Gothenburg, Sweden [Data set]. Zenodo. <https://doi.org/10.5281/zenodo.14629008>
 
 ------------------------------------------------------------------------
 
 # Contact
 
-If you have any question, contact us at ahmed.eldesoky@chalmers.se
-
+If you have any questions, contact us at [ahmed.eldesoky\@chalmers.se](mailto:ahmed.eldesoky@chalmers.se){.email}

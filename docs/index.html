@@ -1478,7 +1478,7 @@ border-radius: 0px;
 
 
 <h1 class="title toc-ignore">List of Attributes</h1>
-<h4 class="date">Last updated: 2025-01-25</h4>
+<h4 class="date">Last updated: 2025-05-06</h4>
 
 </div>
 
@@ -1487,9 +1487,8 @@ border-radius: 0px;
 <h1>Introduction</h1>
 <p>This document provides URI identifiers, definitions, and examples for
 all the attributes (column headers) used in the comma-delimited text
-files included in the data package (gothenburg_bird_data_package-v1.0)
-available to download at <a href="https://doi.org/10.5281/zenodo.14629008" class="uri">https://doi.org/10.5281/zenodo.14629008</a> (currently with
-restricted access for peer review).</p>
+files included in the data package (gothenburg_bird_data_package-v2.0)
+available to download at <a href="https://doi.org/10.5281/zenodo.14629008" class="uri">https://doi.org/10.5281/zenodo.14629008</a>.</p>
 <p>The document is divided into two main sections:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Darwin Core Attributes</strong>: Standard Darwin Core
@@ -1693,6 +1692,19 @@ Information Center (Artportalen).</p>
 </div>
 <div id="custom-attributes" class="section level1">
 <h1>Custom Attributes</h1>
+<div id="globalSortOrder" class="section level2">
+<h2>globalSortOrder</h2>
+<p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#globalSortOrder" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#globalSortOrder</a></p>
+<p><strong>Definition</strong>:<br />
+A taxon specific attribute provided by the Swedish Species Information
+Centre (Artportalen). It is an integer value, which can be used to
+enable a taxonomic sort order of all Swedish taxa handled in the Swedish
+taxonomic database (dyntaxa.se).</p>
+<p><strong>Examples</strong>:<br />
+<code>58146</code><br />
+<code>57141</code></p>
+<hr />
+</div>
 <div id="BirdNETClass" class="section level2">
 <h2>BirdNETClass</h2>
 <p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClass" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClass</a></p>
@@ -1727,6 +1739,18 @@ ornithologist.</p>
 <code>No</code></p>
 <hr />
 </div>
+<div id="isIsolated" class="section level2">
+<h2>isIsolated</h2>
+<p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#isIsolated" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#isIsolated</a></p>
+<p><strong>Definition</strong>:<br />
+Indicates whether a bird detection is isolated within a 9-second window.
+A detection is considered isolated if it is not preceded or followed by
+another detection of the same species within 9 seconds.</p>
+<p><strong>Examples</strong>:<br />
+<code>Yes</code><br />
+<code>No</code></p>
+<hr />
+</div>
 <div id="BirdNETClassAccuracy" class="section level2">
 <h2>BirdNETClassAccuracy</h2>
 <p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClassAccuracy" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#BirdNETClassAccuracy</a></p>
@@ -1753,31 +1777,6 @@ ornithologist-validated records of species A.</p>
 <code>Larus canus (1.00)</code></p>
 <hr />
 </div>
-<div id="maxMisclassificationProbability" class="section level2">
-<h2>maxMisclassificationProbability</h2>
-<p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#maxMisclassificationProbability" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#maxMisclassificationProbability</a></p>
-<p><strong>Definition</strong>:<br />
-The highest misclassification probability value from the <a href="#misclassificationProbabilities">misclassificationProbabilities</a>
-attribute. This value represents the maximum likelihood of a species
-being misclassified as another species by the BirdNET model.</p>
-<p><strong>Examples</strong>:<br />
-<code>0.94</code><br />
-<code>1.00</code></p>
-<hr />
-</div>
-<div id="reclassificationSuggestion" class="section level2">
-<h2>reclassificationSuggestion</h2>
-<p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassificationSuggestion" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassificationSuggestion</a></p>
-<p><strong>Definition</strong>:<br />
-The species name associated with the highest misclassification
-probability (≥ 0.60) from the <a href="#misclassificationProbabilities">misclassificationProbabilities</a>
-attribute, suggesting the species most likely to be correct for the
-occurrence record.</p>
-<p><strong>Examples</strong>:<br />
-<code>Larus canus</code><br />
-<code>NA</code></p>
-<hr />
-</div>
 <div id="reclassified" class="section level2">
 <h2>reclassified</h2>
 <p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassified" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassified</a></p>
@@ -1790,28 +1789,38 @@ Figure 5 of the paper.</p>
 <code>No</code></p>
 <hr />
 </div>
-<div id="occurrenceAccuracy" class="section level2">
-<h2>occurrenceAccuracy</h2>
-<p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#occurrenceAccuracy" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#occurrenceAccuracy</a></p>
+<div id="occurrenceProbability" class="section level2">
+<h2>occurrenceProbability</h2>
+<p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#occurrenceProbability" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#occurrenceProbability</a></p>
 <p><strong>Definition</strong>:<br />
-An estimation of the accuracy level of the species occurrence ranging
-from 0.60 to 1.00, where:</p>
+An estimation of the likelihood of a species occurrence, based on expert
+validation and model predictions, where:</p>
 <ul>
-<li><strong>occurrenceAccuracy = 1.00</strong>: For expert-validated
-records (<code>expertValidated == &quot;Yes&quot;</code>) that were found to be
-correct or reclassified based on a clear suggestion from the
+<li><strong>occurrenceProbability = 1.00</strong>: For expert-validated
+records (<code>expertValidated == &quot;Yes&quot;</code>) that were confirmed to
+be correct, or reclassified based on a clear suggestion from the
 ornithologist (<code>reclassified == &quot;Yes&quot;</code>).</li>
-<li><strong>occurrenceAccuracy = <a href="#BirdNETClassAccuracy">BirdNETClassAccuracy</a></strong>: For not
-expert-validated records (<code>expertValidated == &quot;No&quot;</code>) with
-<code>BirdNETClassAccuracy &gt;= 0.60</code></li>
-<li><strong>occurrenceAccuracy = <a href="#maxMisclassificationProbability">maxMisclassificationProbability</a></strong>:
-For not expert-validated records (<code>expertValidated == &quot;No&quot;</code>)
-with <code>BirdNETClassAccuracy &lt; 0.60</code> that could be
-reclassified (<code>reclassified == &quot;Yes&quot;</code>).</li>
+<li><strong>0.5 &lt; occurrenceAccuracy &lt; 1.00</strong>: For
+non-expert-validated records (<code>expertValidated == &quot;No&quot;</code>),
+this value shows the model-predicted probability of occurrence, based on
+the trained Random Forest classifier.</li>
+</ul>
+<p><strong>Recommended thresholds</strong>:</p>
+<ul>
+<li>Maximizing specificity (<code>occurrenceAccuracy &gt;= 0.82</code>):
+Prioritizes minimizing false positives, potentially increasing false
+negatives. It ensures that when a non-expert-validated record is
+predicted, the prediction is more likely to be correct, but it may miss
+some true occurrences.</li>
+<li>Balancing sensitivity and specificity
+(<code>occurrenceAccuracy &gt;= 0.74</code>): Optimizes both true
+positives and true negatives, minimizing both false positives and false
+negatives. This threshold is determined using Youden’s J statistic
+(Youden, 1950).</li>
 </ul>
 <p><strong>Examples</strong>:<br />
 <code>1.00</code><br />
-<code>0.68</code></p>
+<code>0.51</code></p>
 <hr />
 </div>
 <div id="commonNameSwedish" class="section level2">
@@ -1828,7 +1837,8 @@ The common Swedish name of the taxon.</p>
 <h2>commonNameEnglish</h2>
 <p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#commonNameEnglish" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#commonNameEnglish</a></p>
 <p><strong>Definition</strong>:<br />
-The common English name of the taxon.</p>
+The recommended common English name of the taxon according to the
+Swedish taxonomic database (dyntaxa.se).</p>
 <p><strong>Examples</strong>:<br />
 <code>Common Blackbird</code><br />
 <code>Eurasian Blue Tit</code></p>
@@ -1891,7 +1901,9 @@ impact on pedestrian movement. Environ. Plan. B Urban Anal. City Sci.
 scores and other detector outputs. J. Ornithol. 165, 777–782. <a href="https://doi.org/10.1007/s10336-024-02144-5" class="uri">https://doi.org/10.1007/s10336-024-02144-5</a>  </p>
 <p>Sethi, S.S., Fossøy, F., Cretois, B., Rosten, C.M., 2021. Management
 relevant applications of acoustic monitoring for Norwegian nature – The
-Sound of Norway, 31. Norsk institutt for naturforskning (NINA)  </p>
+Sound of Norway, 31. Norsk institutt for naturforskning (NINA)</p>
+<p>Youden, W.J., 1950. Index for rating diagnostic
+tests. <em>Cancer</em>, <strong>3</strong>, 32–35. DOI: doi: <a href="https://doi.org/10.1002/1097-0142(1950)3:1%3C32::AID-CNCR2820030106%3E3.0.CO;2-3">10.1002/1097-0142(1950)3:1&lt;32::AID-CNCR2820030106&gt;3.0.CO;2-3</a>. </p>
 <hr />
 </div>
 <div id="citaion" class="section level1">
@@ -1905,7 +1917,7 @@ passive audio recordings across dense urban areas in Gothenburg, Sweden
 </div>
 <div id="contact" class="section level1">
 <h1>Contact</h1>
-<p>If you have any question, contact us at <a href="mailto:ahmed.eldesoky@chalmers.se" class="email">ahmed.eldesoky@chalmers.se</a></p>
+<p>If you have any questions, contact us at <a href="mailto:ahmed.eldesoky@chalmers.se" class="email">ahmed.eldesoky@chalmers.se</a></p>
 </div>
 
 
