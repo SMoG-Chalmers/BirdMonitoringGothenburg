@@ -1488,7 +1488,7 @@ border-radius: 0px;
 <p>This document provides URI identifiers, definitions, and examples for
 all the attributes (column headers) used in the comma-delimited text
 files included in the data package (gothenburg_bird_data_package-v2.0)
-available to download at <a href="https://doi.org/10.5281/zenodo.14629008" class="uri">https://doi.org/10.5281/zenodo.14629008</a>.</p>
+available to download at <a href="https://doi.org/10.5281/zenodo.14629007" class="uri">https://doi.org/10.5281/zenodo.14629007</a>.</p>
 <p>The document is divided into two main sections:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Darwin Core Attributes</strong>: Standard Darwin Core
@@ -1743,9 +1743,9 @@ ornithologist.</p>
 <h2>isIsolated</h2>
 <p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#isIsolated" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#isIsolated</a></p>
 <p><strong>Definition</strong>:<br />
-Indicates whether a bird detection is isolated within a 9-second window.
-A detection is considered isolated if it is not preceded or followed by
-another detection of the same species within 9 seconds.</p>
+Indicates whether a bird detection is isolated. A detection is marked as
+isolated if it is not preceded or followed by another detection of the
+same species within a 9 seconds window.</p>
 <p><strong>Examples</strong>:<br />
 <code>Yes</code><br />
 <code>No</code></p>
@@ -1803,7 +1803,8 @@ ornithologist (<code>reclassified == &quot;Yes&quot;</code>).</li>
 <li><strong>0.5 &lt; occurrenceAccuracy &lt; 1.00</strong>: For
 non-expert-validated records (<code>expertValidated == &quot;No&quot;</code>),
 this value shows the model-predicted probability of occurrence, based on
-the trained Random Forest classifier.</li>
+a trained Random Forest classifier (see the paper for more
+details).</li>
 </ul>
 <p><strong>Recommended thresholds</strong>:</p>
 <ul>

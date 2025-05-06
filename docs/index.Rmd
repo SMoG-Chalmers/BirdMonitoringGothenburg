@@ -10,7 +10,7 @@ date: "Last updated: `r Sys.Date()`"
 
 # Introduction
 
-This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v2.0) available to download at <https://doi.org/10.5281/zenodo.14629008>.
+This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v2.0) available to download at <https://doi.org/10.5281/zenodo.14629007>.
 
 The document is divided into two main sections:
 
@@ -303,7 +303,7 @@ Indicates whether the occurrence record has been validated by an expert ornithol
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#isIsolated>
 
 **Definition**:\
-Indicates whether a bird detection is isolated within a 9-second window. A detection is considered isolated if it is not preceded or followed by another detection of the same species within 9 seconds.
+Indicates whether a bird detection is isolated. A detection is marked as isolated if it is not preceded or followed by another detection of the same species within a 9 seconds window.
 
 **Examples**:\
 `Yes`\
@@ -358,7 +358,7 @@ Indicates whether the occurrence record has been reclassified from the original 
 An estimation of the likelihood of a species occurrence, based on expert validation and model predictions, where:
 
 -   **occurrenceProbability = 1.00**: For expert-validated records (`expertValidated == "Yes"`) that were confirmed to be correct, or reclassified based on a clear suggestion from the ornithologist (`reclassified == "Yes"`).
--   **0.5 \< occurrenceAccuracy \< 1.00**: For non-expert-validated records (`expertValidated == "No"`), this value shows the model-predicted probability of occurrence, based on the trained Random Forest classifier.
+-   **0.5 \< occurrenceAccuracy \< 1.00**: For non-expert-validated records (`expertValidated == "No"`), this value shows the model-predicted probability of occurrence, based on a trained Random Forest classifier (see the paper for more details).
 
 **Recommended thresholds**:
 
