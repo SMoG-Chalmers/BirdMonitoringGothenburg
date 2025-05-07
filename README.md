@@ -48,7 +48,7 @@ If you use this dataset in your work, please cite it as follows:
 
 ## Scripts
 
-The R scripts used to produce this dataset are available at https://github.com/ahmaeldesoky/bird-species-detection-gothenburg-2024
+The R scripts used to produce this dataset are available at https://github.com/ahmaeldesoky/bird-species-detection-gothenburg-2024.
 
 # Acknowledgments
 
