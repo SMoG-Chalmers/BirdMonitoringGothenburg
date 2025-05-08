@@ -50,6 +50,7 @@ If you use this dataset in your work, please cite it as follows:
 
 The R scripts used to produce this dataset are available at https://github.com/ahmaeldesoky/bird-species-detection-gothenburg-2024.
 
-# Acknowledgments
+# Funding
 
 This study is part of the project "[Twin2Expand](https://twin2expand.surf.com.cy/): Twinning towards research excellence in evidence-based planning and urban design," which has received funding from the European Union’s Horizon Europe Research and Innovation Programme under Grant Agreement No. 101078890, as well as from UK Research and Innovation (UKRI) under the UK government’s Horizon Europe funding guarantee (grant numbers 10052856 and 10050784).
+
