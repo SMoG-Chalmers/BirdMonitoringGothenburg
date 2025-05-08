@@ -60,4 +60,5 @@ This study is part of the project "[Twin2Expand](https://twin2expand.surf.com.cy
 
 The Twin2Expand is in collaboration with the University of Cyprus, University College London (UCL), Chalmers University of Technology and the Polytechnic University of Turin
 
+![Partners](partners.png)
 
