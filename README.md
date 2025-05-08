@@ -55,3 +55,9 @@ The R scripts used to produce this dataset are available at https://github.com/a
 This study is part of the project "[Twin2Expand](https://twin2expand.surf.com.cy/): Twinning towards research excellence in evidence-based planning and urban design," which has received funding from the European Union’s Horizon Europe Research and Innovation Programme under Grant Agreement No. 101078890, as well as from UK Research and Innovation (UKRI) under the UK government’s Horizon Europe funding guarantee (grant numbers 10052856 and 10050784).
 
 ![Funding](funding.png)
+
+# Partners
+
+The Twin2Expand is in collaboration with the University of Cyprus, University College London (UCL), Chalmers University of Technology and the Polytechnic University of Turin
+
+
