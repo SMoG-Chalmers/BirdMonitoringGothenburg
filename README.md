@@ -32,7 +32,7 @@ Depending on the use case, users may want to filter the dataset based on the [oc
 
 ### Citation
 
-If you use this dataset in your work, please cite it as follows:
+This dataset is part of the manuscript "A bird species occurrence dataset from passive audio recordings across dense urban areas in Gothenburg, Sweden", which is currently under peer review. If you use this dataset in your work, please cite it as follows:
 
 ```bibtex
 @misc{eldesoky2025birdspecies,
