@@ -1,6 +1,6 @@
 # Background
 
-This repository references the data and code products of an urban bird monitoring study conducted in Gothenburg, Sweden, during Spring 2024. The study aimed to monitor avian diversity in dense and compact urban areas using passive audio recordings and machine learning techniques.
+This repository references the data and code products of an urban bird monitoring study conducted by SMoG in Gothenburg, Sweden, during Spring 2024. The study aimed to monitor avian diversity in dense and compact urban areas using passive audio recordings and machine learning techniques.
 
 ## About the Dataset 
 
