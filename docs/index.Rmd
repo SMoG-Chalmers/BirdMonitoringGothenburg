@@ -63,7 +63,7 @@ The full scientific name, with author and date information if known, after recla
 **Identifier**: <http://rs.tdwg.org/dwc/terms/eventDate>
 
 **Definition**:\
-The date during which the occurrence record was recorded, following ISO 8601 date-time standard.
+The date during which the occurrence record was recorded, following the ISO 8601 date-time standard.
 
 **Examples**:\
 `2024-05-02`\
@@ -76,7 +76,7 @@ The date during which the occurrence record was recorded, following ISO 8601 dat
 **Identifier**: <http://rs.tdwg.org/dwc/terms/eventTime>
 
 **Definition**:\
-The local time interval during which the event occurred, following ISO 8601 date-time standard. The “/” solidus character separates start and end times in the representation of a time interval.
+The local time interval during which the event occurred, following the ISO 8601 date-time standard. The “/” solidus character separates start and end times in the representation of a time interval.
 
 **Examples**:\
 `06:02:03/06:02:06`\
@@ -303,7 +303,7 @@ Indicates whether the occurrence record has been validated by an expert ornithol
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#isIsolated>
 
 **Definition**:\
-Indicates whether a bird detection is isolated. A detection is marked as isolated if it is not preceded or followed by another detection of the same species within a 9-seconds window.
+Indicates whether a bird detection is isolated, i.e., not preceded or followed by another detection of the same species within a 9-seconds window.
 
 **Examples**:\
 `Yes`\
@@ -342,7 +342,7 @@ The likelihood that a species classified by the BirdNET model is actually anothe
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#reclassified>
 
 **Definition**:\
-Indicates whether the occurrence record has been reclassified from the original BirdNET classification, following the decision tree shown in Figure 5 of the paper.
+Indicates whether the occurrence record has been reclassified from the original  [BirdNET classification](#BirdNETClass), following the decision tree shown in Figure 5 of the paper.
 
 **Examples**:\
 `Yes`\
