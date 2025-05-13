@@ -251,7 +251,7 @@ The unique LSID (Life Science Identifier) of the taxon according to the Swedish 
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#globalSortOrder>
 
 **Definition**:\
-A taxon specific attribute provided by the Swedish Species Information Centre (Artportalen). It is an integer value, which can be used to enable a taxonomic sort order of all Swedish taxa handled in the Swedish taxonomic database (dyntaxa.se).
+A taxon-specific attribute provided by the Swedish Species Information Centre (Artportalen). It is an integer value, which can be used to enable a taxonomic sort order of all Swedish taxa handled in the Swedish taxonomic database (dyntaxa.se).
 
 **Examples**:\
 `58146`\
@@ -303,7 +303,7 @@ Indicates whether the occurrence record has been validated by an expert ornithol
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#isIsolated>
 
 **Definition**:\
-Indicates whether a bird detection is isolated. A detection is marked as isolated if it is not preceded or followed by another detection of the same species within a 9 seconds window.
+Indicates whether a bird detection is isolated. A detection is marked as isolated if it is not preceded or followed by another detection of the same species within a 9-seconds window.
 
 **Examples**:\
 `Yes`\
@@ -357,13 +357,13 @@ Indicates whether the occurrence record has been reclassified from the original 
 **Definition**:\
 An estimation of the likelihood of a species occurrence, based on expert validation and model predictions, where:
 
--   **occurrenceProbability = 1.00**: For expert-validated records (`expertValidated == "Yes"`) that were confirmed to be correct, or reclassified based on a clear suggestion from the ornithologist (`reclassified == "Yes"`).
--   **0.5 \< occurrenceAccuracy \< 1.00**: For non-expert-validated records (`expertValidated == "No"`), this value shows the model-predicted probability of occurrence, based on a trained Random Forest classifier (see the paper for more details).
+-   **occurrenceProbability = 1.00**: For expert-validated records (`expertValidated == "Yes"`) that were confirmed to be correct or reclassified based on a clear suggestion from the ornithologist (`reclassified == "Yes"`).
+-   **0.5 \< occurrenceProbability \< 1.00**: For non-expert-validated records (`expertValidated == "No"`), this value shows the model-predicted probability of occurrence, based on a trained Random Forest classifier (see the paper for more details).
 
 **Recommended thresholds**:
 
--   Maximizing specificity (`occurrenceAccuracy >= 0.82`): Prioritizes minimizing false positives, potentially increasing false negatives. It ensures that when a non-expert-validated record is predicted, the prediction is more likely to be correct, but it may miss some true occurrences.
--   Balancing sensitivity and specificity (`occurrenceAccuracy >= 0.74`): Optimizes both true positives and true negatives, minimizing both false positives and false negatives. This threshold is determined using Youden’s J statistic (Youden, 1950).
+-   Maximizing specificity (`occurrenceProbability >= 0.82`): Prioritizes minimizing false positives, potentially increasing false negatives. It ensures that when a non-expert-validated record is predicted, the prediction is more likely to be correct, but it may miss some true occurrences.
+-   Balancing sensitivity and specificity (`occurrenceProbability >= 0.74`): Optimizes both true positives and true negatives, minimizing both false positives and false negatives. This threshold is determined using Youden’s J statistic (Youden, 1950).
 
 **Examples**:\
 `1.00`\
