@@ -1478,7 +1478,7 @@ border-radius: 0px;
 
 
 <h1 class="title toc-ignore">List of Attributes</h1>
-<h4 class="date">Last updated: 2025-05-06</h4>
+<h4 class="date">Last updated: 2025-05-13</h4>
 
 </div>
 
@@ -1696,7 +1696,7 @@ Information Center (Artportalen).</p>
 <h2>globalSortOrder</h2>
 <p><strong>Identifier</strong>: <a href="https://smog-chalmers.github.io/BirdMonitoringGothenburg/#globalSortOrder" class="uri">https://smog-chalmers.github.io/BirdMonitoringGothenburg/#globalSortOrder</a></p>
 <p><strong>Definition</strong>:<br />
-A taxon specific attribute provided by the Swedish Species Information
+A taxon-specific attribute provided by the Swedish Species Information
 Centre (Artportalen). It is an integer value, which can be used to
 enable a taxonomic sort order of all Swedish taxa handled in the Swedish
 taxonomic database (dyntaxa.se).</p>
@@ -1745,7 +1745,7 @@ ornithologist.</p>
 <p><strong>Definition</strong>:<br />
 Indicates whether a bird detection is isolated. A detection is marked as
 isolated if it is not preceded or followed by another detection of the
-same species within a 9 seconds window.</p>
+same species within a 9-seconds window.</p>
 <p><strong>Examples</strong>:<br />
 <code>Yes</code><br />
 <code>No</code></p>
@@ -1798,9 +1798,9 @@ validation and model predictions, where:</p>
 <ul>
 <li><strong>occurrenceProbability = 1.00</strong>: For expert-validated
 records (<code>expertValidated == &quot;Yes&quot;</code>) that were confirmed to
-be correct, or reclassified based on a clear suggestion from the
+be correct or reclassified based on a clear suggestion from the
 ornithologist (<code>reclassified == &quot;Yes&quot;</code>).</li>
-<li><strong>0.5 &lt; occurrenceAccuracy &lt; 1.00</strong>: For
+<li><strong>0.5 &lt; occurrenceProbability &lt; 1.00</strong>: For
 non-expert-validated records (<code>expertValidated == &quot;No&quot;</code>),
 this value shows the model-predicted probability of occurrence, based on
 a trained Random Forest classifier (see the paper for more
@@ -1808,13 +1808,13 @@ details).</li>
 </ul>
 <p><strong>Recommended thresholds</strong>:</p>
 <ul>
-<li>Maximizing specificity (<code>occurrenceAccuracy &gt;= 0.82</code>):
-Prioritizes minimizing false positives, potentially increasing false
-negatives. It ensures that when a non-expert-validated record is
-predicted, the prediction is more likely to be correct, but it may miss
-some true occurrences.</li>
+<li>Maximizing specificity
+(<code>occurrenceProbability &gt;= 0.82</code>): Prioritizes minimizing
+false positives, potentially increasing false negatives. It ensures that
+when a non-expert-validated record is predicted, the prediction is more
+likely to be correct, but it may miss some true occurrences.</li>
 <li>Balancing sensitivity and specificity
-(<code>occurrenceAccuracy &gt;= 0.74</code>): Optimizes both true
+(<code>occurrenceProbability &gt;= 0.74</code>): Optimizes both true
 positives and true negatives, minimizing both false positives and false
 negatives. This threshold is determined using Youden’s J statistic
 (Youden, 1950).</li>
