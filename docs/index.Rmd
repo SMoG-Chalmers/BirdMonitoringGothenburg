@@ -303,7 +303,7 @@ Indicates whether the occurrence record has been validated by an expert ornithol
 **Identifier**: <https://smog-chalmers.github.io/BirdMonitoringGothenburg/#isIsolated>
 
 **Definition**:\
-Indicates whether a bird detection is isolated, i.e., not preceded or followed by another detection of the same species within a 9-seconds window at a minimum confidence score of 0.1.
+Indicates whether a bird detection is isolated, i.e., not preceded or followed by another detection of the same species within a 9-seconds window (at a model's detection sensitivity of 1.0, no segment overlap, and a minimum confidence threshold of 0.1).
 
 **Examples**:\
 `Yes`\
