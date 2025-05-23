@@ -10,7 +10,7 @@ date: "Last updated: `r Sys.Date()`"
 
 # Introduction
 
-This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v2.0) available to download at <https://doi.org/10.5281/zenodo.14629007>.
+This document provides URI identifiers, definitions, and examples for all the attributes (column headers) used in the comma-delimited text files included in the data package (gothenburg_bird_data_package-v2.0.0) available to download at <https://zenodo.org/records/15490818>.
 
 The document is divided into two main sections:
 
@@ -362,8 +362,8 @@ An estimation of the likelihood of a species occurrence, based on expert validat
 
 **Recommended thresholds**:
 
--   Maximizing specificity (`occurrenceProbability >= 0.82`): Prioritizes minimizing false positives, potentially increasing false negatives. It ensures that when a non-expert-validated record is predicted, the prediction is more likely to be correct, but it may miss some true occurrences.
--   Balancing sensitivity and specificity (`occurrenceProbability >= 0.74`): Optimizes both true positives and true negatives, minimizing both false positives and false negatives. This threshold is determined using Youden’s J statistic (Youden, 1950).
+-   Maximizing specificity (`occurrenceProbability >= 0.83`): Prioritizes minimizing false positives, potentially increasing false negatives. It ensures that when a non-expert-validated record is predicted, the prediction is more likely to be correct, but it may miss some true occurrences.
+-   Balancing sensitivity and specificity (`occurrenceProbability >= 0.75`): Optimizes both true positives and true negatives, minimizing both false positives and false negatives. This threshold is determined using Youden’s J statistic (Youden, 1950).
 
 **Examples**:\
 `1.00`\
@@ -457,7 +457,7 @@ Youden, W.J., 1950. Index for rating diagnostic tests. *Cancer*, **3**, 32–3
 
 # Citaion
 
-Eldesoky, A. H., Gil, J., Kindvall, O., Stavroulaki, I., Jonasson, L., Bennet, D., Yang, W., Martínez, A., Lichter, R., Petrou, F., & Berghauser Pont, M. (2025). A bird species occurrence dataset from passive audio recordings across dense urban areas in Gothenburg, Sweden [Data set]. Zenodo. <https://doi.org/10.5281/zenodo.14629007>
+Eldesoky, A. H., Gil, J., Kindvall, O., Stavroulaki, I., Jonasson, L., Bennet, D., Yang, W., Martínez, A., Lichter, R., Petrou, F., & Berghauser Pont, M. (2025). A bird species occurrence dataset from passive audio recordings across dense urban areas in Gothenburg, Sweden [Data set]. Zenodo. <https://doi.org/10.5281/zenodo.15490818>
 
 ------------------------------------------------------------------------
 

@@ -4,11 +4,11 @@ This repository references the data and code products of an urban bird monitorin
 
 ## About the Dataset 
 
-The dataste prodcued in this study is a machine learning-generated and expert-validated bird occurrence dataset, based on 10,691 hours of passive audio recordings systematically collected across different types of dense and compact urban areas in Gothenburg, Sweden. The dataset includes **239,570 occurrence records** of **61 species** from April 21 to June 16, 2024, across 30 sites in central Gothenburg.
+The dataste prodcued in this study is a machine learning-generated and expert-validated bird occurrence dataset, based on 10,691 hours of passive audio recordings systematically collected across different types of dense and compact urban areas in Gothenburg, Sweden. The dataset includes **239,597 occurrence records** of **61 species** from April 21 to June 16, 2024, across 30 sites in central Gothenburg.
 
 ### Download 
 
-The dataset is available for download at https://zenodo.org/records/15350316.
+The dataset is available for download at https://zenodo.org/records/15490818.
 
 ### Documentation
 
@@ -21,13 +21,13 @@ Depending on the use case, users may want to filter the dataset based on the [oc
 - **Balance sensitivity and specificity** (an optimal threshold determined based on [Youden's J statistic](https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/1097-0142(1950)3:1%3C32::AID-CNCR2820030106%3E3.0.CO;2-3)):
 
     ```r
-    occurrence %>% filter(occurrenceProbability >= 0.74)
+    occurrence %>% filter(occurrenceProbability >= 0.75)
     ```
     
 -  **Maximize specificity** (a stricter threshold that minimizes false positives):
 
     ```r
-    occurrence %>% filter(occurrenceProbability >= 0.82)
+    occurrence %>% filter(occurrenceProbability >= 0.83)
     ```
 
 ### Citation
@@ -41,8 +41,8 @@ This dataset is part of the manuscript "A bird species occurrence dataset from p
   year = {2025},
   note = {Data set},
   publisher = {Zenodo},
-  doi = {10.5281/zenodo.15350316},
-  url = {https://doi.org/10.5281/zenodo.15350316}
+  doi = {10.5281/zenodo.15490818},
+  url = {https://zenodo.org/records/15490818}
 }
 ```
 
