@@ -3,6 +3,7 @@
 This repository references the data and code products of an urban bird monitoring study conducted by SMoG in Gothenburg, Sweden, during Spring 2024. The study aimed to monitor avian diversity in dense and compact urban areas using passive audio recordings and machine learning techniques.
 
 ## About the Dataset 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15490818.svg)](https://doi.org/10.5281/zenodo.15490818)
 
 The dataste prodcued in this study is a machine learning-generated and expert-validated bird occurrence dataset, based on 10,691 hours of passive audio recordings systematically collected across different types of dense and compact urban areas in Gothenburg, Sweden. The dataset includes **239,597 occurrence records** of **61 species** from April 21 to June 16, 2024, across 30 sites in central Gothenburg.
 

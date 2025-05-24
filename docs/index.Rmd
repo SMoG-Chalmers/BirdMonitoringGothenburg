@@ -1,5 +1,5 @@
 ---
-title: "List of Attributes"
+title: "Attribute Definitions for the Darwin Core Archive: dwca-gothenburg-v2.0.0.zip"
 output: 
   html_document:
     toc: true        # Enable the Table of Contents
@@ -7,6 +7,9 @@ output:
     toc_depth: 2     # Depth of headers in the TOC (adjust as needed)
 date: "Last updated: `r Sys.Date()`"
 ---
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15490818.svg)](https://doi.org/10.5281/zenodo.15490818)
+
 
 # Introduction
 
